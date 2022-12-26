@@ -7,11 +7,9 @@ import Services from "./pages/Services";
 import {Route,Routes} from "react-router-dom"
 
 
-
-
 function App() {
   return (
-    <div >
+    
      <Navbar>
      <Routes>
       <Route path="/" element={<Home/>}/>
@@ -23,7 +21,7 @@ function App() {
       
      </Navbar>
 
-    </div>
+    
   );
 }
 
