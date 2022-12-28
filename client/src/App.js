@@ -9,6 +9,8 @@ import PrivateRoute from "./authentication/PrivateRoute";
 import { privateRoute } from "./routes/privateRoute";
 import Dashboard from "./pages/dashboard/Dashboard";
 import AdminRoute from "./authentication/AdminRoute";
+import AddAdmin from "./pages/dashboard/AddAdmin";
+import AddService from "./pages/dashboard/AddService";
 
 function App() {
   useEffect(() => {
@@ -43,7 +45,10 @@ function App() {
        }
         </Route>
         <Route element={<AdminRoute/>}>
-          <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}>
+          <Route path='add-admin' element={<AddAdmin/>}/>
+        <Route path='add-service' element={<AddService/>}/>
+        </Route>
         </Route>
       </Routes>
      </Navbar>
